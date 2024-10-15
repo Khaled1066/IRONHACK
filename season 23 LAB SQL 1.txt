@@ -1,0 +1,65 @@
+CREATE DATABASE lab_mysql;
+USE lab_mysql;
+CREATE SCHEMA LAB1;
+USE SCHEMA lab_mysql.LAB1;
+
+
+
+CREATE TABLE Coches (
+  `id` VARCHAR(20) ,
+  `VIN` VARCHAR(50) 
+  `manufacturer` VARCHAR(20) ,
+  `model` VARCHAR(20) ,
+  `year_` VARCHAR(20) ,
+  `color` VARCHAR(20)
+  );
+
+INSERT INTO COCHES (car_id, manufacturer, model, year_, color)
+VALUES
+(0 ,3K096I98581DHSNUP, Volkswagen, Tiguan, 2019, Azul),
+(1,	ZM8G7BEUQZ97IH46V,	Peugeot	Rifter,	2019,	Rojo),
+(2,	RKXVNNIHLVVZOUB4M,	Ford,	Fusion,	2018,	Blanco),
+(3,	HKNDGS7CU31E9Z7JW,	Toyota,	RAV4,	2018,	Plata),
+(4,	DAM41UDN3CHU2WVF6,	Volvo,	V60,	2019,	Gris),
+(5,	DAM41UDN3CHU2WVF6,	Volvo,	V60, Cross Country,	2019,	Gris)
+
+
+
+CREATE TABLE Customers (
+
+  `costumer_id` VARCHAR(20),
+  `first_name` VARCHAR(20),
+  `last_name` VARCHAR(20),
+  `phone_no` VARCHAR(20) ,
+  `email` VARCHAR(20) ,
+  `address` VARCHAR(40) ,
+  `city` VARCHAR(20) ,
+  `state` VARCHAR(20) ,
+  `country` VARCHAR(20),
+  `zip_code` VARCHAR(20) ,
+  `client` VARCHAR(20)
+
+);
+
+INSTER INTO Customers
+VALUES
+(0,	10001,	Pablo Picasso,	+34 636 17 63 82,	-,	Paseo de la Chopera 14,	Madrid,	Madrid,	España,	28045),
+(1,	20001,	Abraham Lincoln,	+1 305 907 7086,	-,	120 SW 8th St	Miami,	Florida,	Estados Unidos,	33130),
+(2,	30001,	Napoléon Bonaparte,	+33 1 79 75 40 00,	-,	40 Rue du Colisée,	París,	Île-de-France,	Francia,	75008)
+
+CREATE TABLE SalesPerson (
+
+ `salesperson_id` VARCHAR(20),
+  `first_name` VARCHAR(20),
+  `store_name` VARCHAR(20)
+);
+
+CREATE TABLE Invoices (
+
+  `id` VARCHAR(20),
+  `invoice_number` VARCHAR(20),
+  `invoice_date` VARCHAR(20),
+  `car` VARCHAR(20) ,
+  `customer` VARCHAR(20) ,
+  `vendor` VARCHAR(20)
+);
